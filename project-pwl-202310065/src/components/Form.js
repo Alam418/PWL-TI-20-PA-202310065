@@ -6,18 +6,18 @@ import "react-datepicker/dist/react-datepicker.css";
 export default function Form() {
 
   // const today = new Date().getFullYear();
-
+  const initialDate = new Date().getFullYear();
   const [firstName, setFirstName] = useState('');
   const [middleName, setMiddleName] = useState('');
   const [lastName, setLastName] = useState('');
   const [npm, setNpm] = useState('')
-  const [date, setDate] = useState(new Date().getFullYear());
+  const [date, setDate] = useState(initialDate);
   const [message, setMessage] = useState('');
   const [message2, setMessage2] = useState('');
   const [message3, setMessage3] = useState('');
 
   var age = new Date().getFullYear() - new Date(date).getFullYear();
-  // console.log(birthDate);
+  // console.log(age);
 
   const handleInput = (event) => {
     event.preventDefault();
@@ -71,10 +71,11 @@ export default function Form() {
             </div>
 
             <div className="col-12">
-              <label for="address" className="form-label">Address</label>
+              <label for="address" className="form-label">Birthdate</label>
               <DatePicker
                 className='form-control'
                 selected={date}
+                dateFormat="yyyy-MM-dd"
                 onChange={(date) => setDate(date)}
               />
             </div>

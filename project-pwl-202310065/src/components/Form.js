@@ -5,7 +5,7 @@ import "react-datepicker/dist/react-datepicker.css";
 
 export default function Form() {
 
-  const today = new Date().getFullYear();
+  // const today = new Date().getFullYear();
 
   const [firstName, setFirstName] = useState('');
   const [middleName, setMiddleName] = useState('');
@@ -60,8 +60,13 @@ export default function Form() {
 
             <div className="col-sm-12">
               <label for="npm" className="form-label">NPM</label>
-              <input type="text" className="form-control" id="npm" value={npm} placeholder=""
+              <input type="number" className="form-control" id="npm" value={npm} placeholder=""
+                onInput={(event) => {
+                  event.target.value = Math.max(0, parseInt(event.target.value)).toString().slice(0, 10)
+                }}
+                min={0}
                 onChange={(event) => setNpm(event.target.value)}
+                maxLength={10}
                 required />
             </div>
 

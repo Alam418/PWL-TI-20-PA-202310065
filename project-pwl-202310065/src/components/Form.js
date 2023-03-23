@@ -77,6 +77,7 @@ export default function Form() {
                 selected={date}
                 dateFormat="yyyy-MM-dd"
                 onChange={(date) => setDate(date)}
+                required
               />
             </div>
 

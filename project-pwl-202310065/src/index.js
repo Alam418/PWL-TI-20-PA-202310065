@@ -1,19 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import reportWebVitals from './reportWebVitals';
+// import Login from './Login'
+import { BrowserRouter } from 'react-router-dom';
+import AppRoute from './components/Latihan-3_1/apps/AppRoute'
+
 // import Form from './components/Form'
 // import App from './App';
-import reportWebVitals from './reportWebVitals';
-import Praktikum from './components/Latihan-5_1/Praktikum';
+// import Layout from './components/Pertemuan-3/layouts/Layout';
+// import Home from './components/Pertemuan-3/modules/homes/Home';
+// import Praktikum from './components/Latihan-5_1/Praktikum';
 
+import './assets/style.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
+const {PUBLIC_URL} = process.env;
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Praktikum />
+    {/* <Login/> */}
+    <BrowserRouter basename={PUBLIC_URL}>
+      <AppRoute />
+    </BrowserRouter>
   </React.StrictMode>
 );
 

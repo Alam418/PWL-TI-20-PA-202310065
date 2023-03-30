@@ -53,23 +53,6 @@ function App() {
           <button type="submit" class="btn btn-outline-success w-100">Submit</button>
         </div>
       </form>
-      {/* <form onSubmit={handleLogin}>
-        <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(event) => setEmail(event.target.value)}
-        />
-        <br />
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(event) => setPassword(event.target.value)}
-        />
-        <br />
-        <button type="submit">Login</button>
-      </form> */}
     </div>
 
   );

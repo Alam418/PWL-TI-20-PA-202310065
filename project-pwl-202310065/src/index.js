@@ -4,7 +4,7 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 // import Login from './Login'
 import { BrowserRouter } from 'react-router-dom';
-import AppRoute from './components/pertemuan-5/apps/routes/AppRoute'
+import AppRoute from './components/Latihan-4/apps/routes/AppRoute'
 
 // import Form from './components/Form'
 // import App from './App';
